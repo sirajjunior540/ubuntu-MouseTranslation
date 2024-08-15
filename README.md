@@ -11,15 +11,17 @@ This app is particularly useful for those who frequently need to translate snipp
 - **Real-time Notifications:** The translation appears near your mouse cursor.
 - **Background Operation:** Runs silently in the background with a tray icon for easy access.
 
-## Installation
+## Downloading
 
    ```bash
-    # Download the .deb file using curl
-    curl -L -o MouseTranslation-v1.deb https://github.com/sirajjunior540/ubuntu-MouseTranslation/raw/master/MouseTranslation-v1.deb
+      # Download the .deb file using curl
+      curl -L -o MouseTranslation-v1.deb https://github.com/sirajjunior540/ubuntu-MouseTranslation/raw/master/MouseTranslation-v1.deb
+   ```
+## Installation
 
-    # Install the .deb file using dpkg
-    sudo dpkg -i ./MouseTranslation-v1.deb
-
+   ```
+      # Install the .deb file using dpkg
+      sudo dpkg -i ./MouseTranslation-v1.deb
    ```
 
 ### Prerequisites
