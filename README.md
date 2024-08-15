@@ -13,6 +13,15 @@ This app is particularly useful for those who frequently need to translate snipp
 
 ## Installation
 
+   ```bash
+    # Download the .deb file using curl
+    curl -L -o MouseTranslation-v1.deb https://github.com/sirajjunior540/ubuntu-MouseTranslation/raw/master/MouseTranslation-v1.deb
+
+    # Install the .deb file using dpkg
+    sudo dpkg -i ./MouseTranslation-v1.deb
+
+   ```
+
 ### Prerequisites
 Before installing the Mouse Translation Tool, ensure you have the following dependencies installed on your system:
 
