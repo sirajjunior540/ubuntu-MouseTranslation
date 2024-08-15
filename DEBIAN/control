@@ -1,0 +1,10 @@
+Package: mousetranslation
+Version: 1.0
+Section: base
+Priority: optional
+Architecture: all
+Depends: xdotool, xclip, jq, zenity, python3, python3-pip, python3-pil, python3-wheel
+Maintainer: Abdallah Ahmed <sirajjunior@gmail.com>
+Description: A translation app with tray icon support
+
+

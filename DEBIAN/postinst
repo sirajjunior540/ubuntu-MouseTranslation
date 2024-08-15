@@ -1,0 +1,17 @@
+#!/bin/bash
+#!/bin/bash
+
+# Prompt user to enter their Google Translate API Key
+echo "If you don't have an API key, navigate to this page to get one: https://cloud.google.com/translate"
+echo "Enter your Google Translate API Key:"
+read API_KEY
+
+# Replace the placeholder in the script with the provided API key
+sed -i "s|<YOUR_API_KEY>|$API_KEY|g" /usr/bin/mousetranslation.sh
+
+# Install required Python package
+pip install pystray
+
+echo "API Key has been set and pystray has been installed."
+
+

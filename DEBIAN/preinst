@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+# Install python3-pip if not installed
+if ! dpkg -s python3-pip >/dev/null 2>&1; then
+    apt-get update
+    apt-get install -y python3-pip
+fi
+
