@@ -1,15 +1,9 @@
 #!/bin/bash
 
 API_KEY="<YOUR_API_KEY>"  # Placeholder, will be replaced during installation
+TARGET_LANG="ar"
 LAST_TRANSLATED_TEXT=""
 LAST_CLIPBOARD_TEXT=""
-
-# Prompt user to select target language using zenity
-TARGET_LANG=$(zenity --list --title="Select Language" --text="Choose the target language:" --radiolist --column="Select" --column="Language Code" TRUE "ar" FALSE "en" FALSE "es" FALSE "fr" FALSE "de" FALSE "it" FALSE "ja" FALSE "ko" FALSE "ru" FALSE "zh-CN")
-if [ -z "$TARGET_LANG" ]; then
-    zenity --error --text="Target language is required. Exiting..."
-    exit 1
-fi
 
 # Function to run the main loop
 run_translation() {
@@ -34,8 +28,6 @@ run_translation() {
                 X=$(xdotool getmouselocation --shell | grep -Eo 'X=[0-9]+' | grep -Eo '[0-9]+')
                 Y=$(xdotool getmouselocation --shell | grep -Eo 'Y=[0-9]+' | grep -Eo '[0-9]+')
                 (echo "$TRANSLATED_TEXT"; sleep 3) | zenity --notification --text="$TRANSLATED_TEXT" --timeout=3 --width=200 --height=100 --title="Translation"
-                
-
             else
                 echo "Translation failed or no translation found"
                 ERROR_MESSAGE=$(echo $RESPONSE | jq -r '.error.message' 2>/dev/null)
@@ -90,4 +82,3 @@ create_tray_icon
 
 # Wait for user to stop the app
 kill $TRANSLATION_PID
-
